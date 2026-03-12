@@ -1,9 +1,10 @@
 <template>
-    <section class="w-full bg-neutral-950">
+    <section class="w-full bg-black">
         <div class="bg-[url('img/backgrounds/hero/slider-1-bg-1.png')] bg-cover w-full h-full bg-no-repeat">
             <div class="flex flex-col lg:flex-row w-full justify-between">
                 <div class="flex flex-col justify-between h-screen text-white px-5 py-10">
                     <div class="flex flex-col items-center w-full space-y-10">
+                        
                         <img src="/public/img/logo-light.png" alt="logo" class="w-16">
                         <ul class="space-y-4">
                             <li><i class="pi pi-instagram"></i></li>
@@ -22,7 +23,7 @@
 
                 <div class="flex flex-col w-full text-center lg:text-left text-white">
                     <div class="items-center flex my-auto">
-                        <p class="flex text-8xl font-extrabold font-['Plus_Jakarta_Sans']">
+                        <p class="flex text-8xl font-extrabold font-['Plus_Jakarta_Sans'] tracking-tight">
                             Gordim the more delicious
                         </p>
                     </div>
