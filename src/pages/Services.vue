@@ -1,3 +1,22 @@
+<script setup>
+const cards = [
+    {
+        id: 1,
+        title: 'Web Design',
+        text: 'Modern UI/UX design for brands.',
+        imageUrl: "bg-[url('https://bracketweb.com/ogencywp/wp-content/uploads/2023/07/feature-1.jpg')]"
+    }
+];
+
+const repeted = [...cards, ...cards, ...cards];
+
+const banners = [{
+    id: 1,
+    url: 'https://upload.wikimedia.org/wikipedia/commons/4/4d/OpenAI_Logo.svg'
+}];
+
+const bannersLoop = [...banners, ...banners, ...banners, ...banners, ...banners, ...banners, ...banners];
+</script>
 <template>
     <section class="bg-black text-white">
 
@@ -8,43 +27,27 @@
         </div>
 
 
-        <div class="bg-white py-10 overflow-hidden">
+        <div class="py-10 overflow-hidden bg-white">
             <div class="flex whitespace-nowrap animate-[scroll_20s_linear_infinite] gap-32">
-
-                <img src="https://upload.wikimedia.org/wikipedia/commons/4/4d/OpenAI_Logo.svg" class="h-10">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/4/4d/OpenAI_Logo.svg" class="h-10">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/4/4d/OpenAI_Logo.svg" class="h-10">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/4/4d/OpenAI_Logo.svg" class="h-10">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/4/4d/OpenAI_Logo.svg" class="h-10">
-
+                <img v-for="banner in bannersLoop" :src="banner.url" :key="banner.id" class="h-10">
             </div>
         </div>
 
 
         <div class="container mx-auto grid lg:grid-cols-3 gap-10 px-10 pt-5">
 
-            <div class="h-52 border bg-cover bg-[url('https://bracketweb.com/ogencywp/wp-content/uploads/2023/07/feature-1.jpg')] border-neutral-800 hover:border-orange-400 transition">
-                <div class="bg-neutral-950 w-full text-center">
-                    <h3 class="text-2xl font-bold mb-4">Web Design</h3>
+            <div v-for="card in repeted" :key="card.id"
+                class="h-72 border bg-cover  border-neutral-800 hover:border-orange-400 transition flex flex-col justify-end cursor-pointer"
+                :class="card.imageUrl">
+                <div class="bg-neutral-950 w-full text-center p-2">
+                    <h3 class="text-2xl font-bold mb-4">
+                        {{ card.title }}
+                    </h3>
                     <p class="text-gray-400">
-                        Modern UI/UX design for brands.
+                        {{ card.text }}
                     </p>
                 </div>
 
-            </div>
-
-            <div class="p-10 border border-neutral-800 hover:border-orange-400 transition">
-                <h3 class="text-2xl font-bold mb-4">Development</h3>
-                <p class="text-gray-400">
-                    High performance web applications.
-                </p>
-            </div>
-
-            <div class="p-10 border border-neutral-800 hover:border-orange-400 transition">
-                <h3 class="text-2xl font-bold mb-4">Branding</h3>
-                <p class="text-gray-400">
-                    Build strong digital identity.
-                </p>
             </div>
 
         </div>

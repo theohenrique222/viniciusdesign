@@ -24,7 +24,7 @@
                 <div class="flex flex-col w-full text-center lg:text-left text-white">
                     <div class="items-center flex my-auto">
                         <p class="flex text-8xl font-extrabold font-['Plus_Jakarta_Sans'] tracking-tight">
-                            Gordim the more delicious
+                            Lorem ipsum, dolor sit amet
                         </p>
                     </div>
 
