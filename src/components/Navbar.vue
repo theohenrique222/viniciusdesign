@@ -22,7 +22,7 @@ onUnmounted(() => {
     :class="[
         'fixed top-0 w-full z-50 transition-all duration-1000 ease-out',
         isScrolled 
-            ? 'bg-neutral-900 shadow-lg' 
+            ? 'bg-neutral-950 shadow-lg' 
             : 'bg-transparent py-6'
     ]"
     >
@@ -36,7 +36,7 @@ onUnmounted(() => {
             <!-- Menu Desktop -->
             <ul class="hidden lg:flex gap-10 text-white font-semibold">
                 <li><a href="#" class="text-amber-500">Início</a></li>
-                <li><a href="#" class="hover:text-amber-500 transition">Sobre</a></li>
+                <li><a href="#services" class="hover:text-amber-500 transition">Sobre</a></li>
                 <li><a href="#" class="hover:text-amber-500 transition">Services</a></li>
                 <li><a href="#" class="hover:text-amber-500 transition">Portfolio</a></li>
                 <li><a href="#" class="hover:text-amber-500 transition">Contact</a></li>

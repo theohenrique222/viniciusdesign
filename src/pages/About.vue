@@ -4,9 +4,9 @@
             <div class="relative flex-1 z-20 flex items-center justify-center">
                 <div class="flex items-center justify-center h-full">
                     <div class="w-full max-w-2xl px-6 py-12 lg:p-12 xl:p-16 text-center lg:text-left">
-                        <p class="font-light uppercase tracking-widest text-neutral-400">Sobre mim</p>
+                        <p class="font-light uppercase tracking-widest text-amber-500">Sobre mim</p>
                         
-                        <h3 class="font-bold text-7xl mb-6 ">
+                        <h3 class="font-extrabold text-7xl mb-6 ">
                             Create the screens your
                         </h3>
 
