@@ -2,13 +2,23 @@
 const cards = [
     {
         id: 1,
-        title: 'Web Design',
-        text: 'Modern UI/UX design for brands.',
+        title: 'Estética Digital',
+        text: 'A estética digital é construída com foco em impacto e coerência, garantindo que cores, tipografia e elementos visuais trabalhem juntos de forma estratégica.',
         imageUrl: "bg-[url('https://bracketweb.com/ogencywp/wp-content/uploads/2023/07/feature-1.jpg')]"
+    },
+    {
+        id: 1,
+        title: 'Experiência Visual',
+        text: 'Cada elemento é cuidadosamente planejado para conduzir o olhar, facilitar a navegação e proporcionar uma experiência agradável do início ao fim.',
+        imageUrl: "bg-[url('https://bracketweb.com/ogencywp/wp-content/uploads/2023/07/feature-2.jpg')]"
+    },
+    {
+        id: 1,
+        title: 'Design Estratégico',
+        text: 'Desenvolvemos projetos que vão além do visual, utilizando o design como ferramenta para posicionar marcas e alcançar objetivos.',
+        imageUrl: "bg-[url('https://bracketweb.com/ogencywp/wp-content/uploads/2023/07/feature-2.jpg')]"
     }
 ];
-
-const repeted = [...cards, ...cards, ...cards];
 
 const banners = [{
     id: 1,
@@ -47,28 +57,53 @@ const bannersLoop = [...banners, ...banners, ...banners, ...banners, ...banners,
 
         <div class="container mx-auto grid lg:grid-cols-3 gap-10 px-10 py-20">
 
-    <div v-for="card in repeted" :key="card.id"
-        class="h-72 border border-neutral-800 hover:border-orange-400 transition flex flex-col justify-end cursor-pointer relative overflow-hidden">
+            <div v-for="card in cards" :key="card.id"
+                class="h-72 border border-neutral-800 hover:border-orange-400 transition flex flex-col justify-end cursor-pointer relative overflow-visible group">
 
-        <div 
-            class="absolute inset-0 bg-cover bg-center grayscale hover:grayscale-0 hover:scale-110 transition duration-700"
-            :class="card.imageUrl">
-        </div>
+                <!-- Imagem (zoom controlado aqui) -->
+                <div class="absolute inset-0 overflow-hidden">
+                    <div class="w-full h-full bg-cover bg-center grayscale 
+                       group-hover:grayscale-0 group-hover:scale-110 
+                       transition duration-700" :class="card.imageUrl">
+                    </div>
+                </div>
 
-        <div class="absolute inset-0 bg-black/40"></div>
+                <!-- Overlay -->
+                <div class="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition"></div>
 
-        <div class="bg-neutral-950 p-4 m-4 flex justify-between relative z-10">
-            <h3 class="text-2xl font-bold">
-                {{ card.title }}
-            </h3>
+                <!-- Card -->
+                <div class="bg-neutral-950 p-4 m-4 relative z-10 
+                    transition-all duration-500 
+                    h-20 group-hover:h-44 
+                    flex flex-col justify-between overflow-visible">
 
-            <div class="absolute -top-6 right-6 bg-amber-500 rounded-full shadow-lg">
-                <i class="pi pi-verified p-3 text-white" style="font-size: 2rem"></i>
+                    <!-- Topo -->
+                    <div class="flex justify-between items-center">
+                        <h3 class="text-2xl font-bold">
+                            {{ card.title }}
+                        </h3>
+
+                        <div
+                            class="absolute -top-6 right-6 z-20 bg-amber-500 rounded-full shadow-lg">
+                            <i class="pi pi-verified p-3 text-white" style="font-size: 2rem"></i>
+                        </div>
+                    </div>
+
+                    <!-- Wrapper só pro texto -->
+                    <div class="overflow-hidden">
+                        <p class="text-sm text-neutral-300 mt-2 
+                          opacity-0 translate-y-4 
+                          group-hover:opacity-100 group-hover:translate-y-0 
+                          transition-all duration-500">
+                            {{ card.text || 'Design pensado para criar impacto visual e transmitir valor.' }}
+                        </p>
+                    </div>
+
+                </div>
+
             </div>
-        </div>
 
-    </div>
-</div>
+        </div>
 
     </section>
     <section class="bg-black">
