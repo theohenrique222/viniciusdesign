@@ -7,7 +7,8 @@
                 <!-- Sidebar -->
                 <div class="hidden lg:flex flex-col justify-between h-screen text-white px-5 py-10">
                     <div class="flex flex-col items-center w-full space-y-10">
-                        <img src="/img/logo-light.png" alt="logo" class="w-16">
+                        
+                        <div class="h-10"></div>
 
                         <ul class="space-y-4">
                             <li><i class="pi pi-instagram"></i></li>
