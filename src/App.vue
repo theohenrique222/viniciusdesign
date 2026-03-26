@@ -7,6 +7,7 @@ import Price from './pages/Price.vue';
 import Portfolio from './pages/Portfolio.vue';
 import Contact from './pages/Contact.vue';
 import Testimonials from './pages/Testimonials.vue';
+import Footer from './components/Footer.vue';
 
 </script>
 
@@ -19,6 +20,7 @@ import Testimonials from './pages/Testimonials.vue';
     <Price/>
     <Testimonials/>
     <Contact/>
+    <Footer/>
 </template>
 
 <style scoped>

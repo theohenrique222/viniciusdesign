@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-black pt-10">
+    <div class="bg-black py-10">
 
         <div class="bg-neutral-900 p-8 rounded-2xl max-w-3xl mx-auto flex flex-col gap-6">
     
@@ -23,13 +23,6 @@
                 <input type="email" placeholder="Seu email (opcional)"
                     class="bg-neutral-800 p-4 rounded-lg text-white outline-none focus:ring-2 focus:ring-amber-500" />
     
-                <select class="bg-neutral-800 p-4 rounded-lg text-white outline-none focus:ring-2 focus:ring-amber-500">
-                    <option>Tipo de projeto</option>
-                    <option>Artes para redes sociais</option>
-                    <option>Identidade visual</option>
-                    <option>Pacote mensal</option>
-                </select>
-    
                 <textarea rows="4" placeholder="Fale um pouco sobre o que você precisa..."
                     class="bg-neutral-800 p-4 rounded-lg text-white outline-none focus:ring-2 focus:ring-amber-500"></textarea>
     
@@ -43,9 +36,4 @@
         </div>
     </div>
 </template>
-<script setup>
-import Button from 'primevue/button';
-import IconField from 'primevue/iconfield';
-import InputIcon from 'primevue/inputicon';
-import InputText from 'primevue/inputtext';
-</script>
+
