@@ -4,6 +4,7 @@ import Navbar from './components/Navbar.vue';
 import Services from './pages/Services.vue';
 import About from './pages/About.vue';
 import Price from './pages/Price.vue';
+import Portfolio from './pages/Portfolio.vue';
 
 </script>
 
@@ -12,7 +13,8 @@ import Price from './pages/Price.vue';
     <Hero/>
     <Services/>
     <About/>
-    <Price/>    
+    <Portfolio/>    
+    <Price/>
 </template>
 
 <style scoped>

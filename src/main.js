@@ -6,6 +6,8 @@ import App from './App.vue'
 import Aura from '@primeuix/themes/aura';
 import Button from "primevue/button"
 import 'primeicons/primeicons.css'
+import { Image } from 'primevue';
+
 
 document.documentElement.classList.remove('dark');
 
@@ -18,4 +20,5 @@ app.use(PrimeVue, {
 });
 
 app.component('Button', Button);
+app.component('Image', Image);
 app.mount('#app');

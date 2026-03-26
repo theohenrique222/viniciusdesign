@@ -3,19 +3,19 @@ const cards = [
     {
         id: 1,
         title: 'Estética Digital',
-        text: 'A estética digital é construída com foco em impacto e coerência, garantindo que cores, tipografia e elementos visuais trabalhem juntos de forma estratégica.',
+        text: 'Estética digital com impacto e coerência visual.',
         imageUrl: "bg-[url('https://bracketweb.com/ogencywp/wp-content/uploads/2023/07/feature-1.jpg')]"
     },
     {
         id: 1,
         title: 'Experiência Visual',
-        text: 'Cada elemento é cuidadosamente planejado para conduzir o olhar, facilitar a navegação e proporcionar uma experiência agradável do início ao fim.',
+        text: 'Cada detalhe conduz o olhar e torna a experiência mais fluida e agradável.',
         imageUrl: "bg-[url('https://bracketweb.com/ogencywp/wp-content/uploads/2023/07/feature-2.jpg')]"
     },
     {
         id: 1,
         title: 'Design Estratégico',
-        text: 'Desenvolvemos projetos que vão além do visual, utilizando o design como ferramenta para posicionar marcas e alcançar objetivos.',
+        text: 'Design que posiciona marcas e gera resultados.',
         imageUrl: "bg-[url('https://bracketweb.com/ogencywp/wp-content/uploads/2023/07/feature-2.jpg')]"
     }
 ];
@@ -83,20 +83,33 @@ const bannersLoop = [...banners, ...banners, ...banners, ...banners, ...banners,
                             {{ card.title }}
                         </h3>
 
-                        <div
-                            class="absolute -top-6 right-6 z-20 bg-amber-500 rounded-full shadow-lg">
+                        <div class="absolute -top-6 right-6 z-20 bg-amber-500 rounded-full shadow-lg">
                             <i class="pi pi-verified p-3 text-white" style="font-size: 2rem"></i>
                         </div>
                     </div>
 
                     <!-- Wrapper só pro texto -->
                     <div class="overflow-hidden">
-                        <p class="text-sm text-neutral-300 mt-2 
-                          opacity-0 translate-y-4 
+                        <p class="text-sm text-neutral-300 
+                          opacity-0 translate-y-4 font-extralight
                           group-hover:opacity-100 group-hover:translate-y-0 
-                          transition-all duration-500">
-                            {{ card.text || 'Design pensado para criar impacto visual e transmitir valor.' }}
+                          transition-all duration-500 leading-5">
+                            {{ card.text }}
                         </p>
+                        <div class="h-px w-full bg-neutral-600 my-3"/>
+
+                        
+                        <a href="#">
+                            <div class="flex items-center">
+                                <div class="text-white hover:text-amber-500 flex p-2">
+                                    <p class=" font-extrabold">
+                                        Saiba mais  
+                                    </p>
+                                    <i class="pi pi-arrow-down-right font-extrabold hover:-rotate-45 transition duration-300 px-5 "></i>
+                                </div>
+                            </div>
+                        </a>
+
                     </div>
 
                 </div>
@@ -122,99 +135,7 @@ const bannersLoop = [...banners, ...banners, ...banners, ...banners, ...banners,
 
     </section>
 
-    <section>
-
-        <div class="bg-surface-0 dark:bg-surface-950 px-6 md:px-12 lg:px-20 py-20 text-center">
-            <div class="flex flex-col gap-6">
-                <div class="flex flex-col items-center gap-4">
-                    <div class="font-bold text-3xl leading-tight">
-                        <span class="text-surface-900 dark:text-surface-0">One Product, </span>
-                        <span class="text-primary-500 dark:text-primary-400">Many Solutions</span>
-                    </div>
-                    <div class="text-surface-500 dark:text-surface-400 leading-tight">Ac turpis egestas maecenas
-                        pharetra convallis posuere morbi leo urna.</div>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                    <div class="w-full rounded-md p-4">
-                        <span
-                            class="mb-4 flex h-16 w-16 items-center justify-center rounded-lg bg-surface-0 dark:bg-surface-800 shadow mx-auto">
-                            <i class="pi pi-desktop text-2xl! lg:text-3xl! text-primary-500 dark:text-primary-400" />
-                        </span>
-                        <div class="flex flex-col gap-1">
-                            <div class="text-surface-900 dark:text-surface-0 text-xl font-medium leading-tight">
-                                Built for Developers</div>
-                            <p class="text-surface-500 dark:text-surface-400 leading-normal">Duis aute irure dolor
-                                in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                        </div>
-                    </div>
-                    <div class="w-full rounded-md p-4">
-                        <span
-                            class="mb-4 flex h-16 w-16 items-center justify-center rounded-lg bg-surface-0 dark:bg-surface-800 shadow mx-auto">
-                            <i class="pi pi-lock text-2xl! lg:text-3xl! text-primary-500 dark:text-primary-400" />
-                        </span>
-                        <div class="flex flex-col gap-1">
-                            <div class="text-surface-900 dark:text-surface-0 text-xl font-medium leading-tight">
-                                End-to-End Encryption</div>
-                            <p class="text-surface-500 dark:text-surface-400 leading-normal">Risus nec feugiat in
-                                fermentum posuere urna nec. Posuere sollicitudin aliquam ultrices sagittis.</p>
-                        </div>
-                    </div>
-                    <div class="w-full rounded-md p-4">
-                        <span
-                            class="mb-4 flex h-16 w-16 items-center justify-center rounded-lg bg-surface-0 dark:bg-surface-800 shadow mx-auto">
-                            <i class="pi pi-face-smile text-2xl! lg:text-3xl! text-primary-500 dark:text-primary-400" />
-                        </span>
-                        <div class="flex flex-col gap-1">
-                            <div class="text-surface-900 dark:text-surface-0 text-xl font-medium leading-tight">Easy
-                                to Use</div>
-                            <p class="text-surface-500 dark:text-surface-400 leading-normal">Ornare suspendisse sed
-                                nisi lacus sed viverra tellus. Neque volutpat ac tincidunt vitae semper.</p>
-                        </div>
-                    </div>
-                    <div class="w-full rounded-md p-4">
-                        <span
-                            class="mb-4 flex h-16 w-16 items-center justify-center rounded-lg bg-surface-0 dark:bg-surface-800 shadow mx-auto">
-                            <i class="pi pi-globe text-2xl! lg:text-3xl! text-primary-500 dark:text-primary-400" />
-                        </span>
-                        <div class="flex flex-col gap-1">
-                            <div class="text-surface-900 dark:text-surface-0 text-xl font-medium leading-tight">Fast
-                                & Global Support</div>
-                            <p class="text-surface-500 dark:text-surface-400 leading-normal">Fermentum et
-                                sollicitudin ac orci phasellus egestas tellus rutrum tellus.</p>
-                        </div>
-                    </div>
-                    <div class="w-full rounded-md p-4">
-                        <span
-                            class="mb-4 flex h-16 w-16 items-center justify-center rounded-lg bg-surface-0 dark:bg-surface-800 shadow mx-auto">
-                            <i class="pi pi-github text-2xl! lg:text-3xl! text-primary-500 dark:text-primary-400" />
-                        </span>
-                        <div class="flex flex-col gap-1">
-                            <div class="text-surface-900 dark:text-surface-0 text-xl font-medium leading-tight">Open
-                                Source</div>
-                            <p class="text-surface-500 dark:text-surface-400 leading-normal">Nec tincidunt praesent
-                                semper feugiat. Sed adipiscing diam donec adipiscing tristique risus nec feugiat.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="w-full rounded-md p-4">
-                        <span
-                            class="mb-4 flex h-16 w-16 items-center justify-center rounded-lg bg-surface-0 dark:bg-surface-800 shadow mx-auto">
-                            <i class="pi pi-shield text-2xl! lg:text-3xl! text-primary-500 dark:text-primary-400" />
-                        </span>
-                        <div class="flex flex-col gap-1">
-                            <div class="text-surface-900 dark:text-surface-0 text-xl font-medium leading-tight">
-                                Trusted Security</div>
-                            <p class="text-surface-500 dark:text-surface-400 leading-normal">Mattis rhoncus urna
-                                neque viverra justo nec ultrices. Id cursus metus aliquam eleifend.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-
-    </section>
+    
 </template>
 
 <style>
