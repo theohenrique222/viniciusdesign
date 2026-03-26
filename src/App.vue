@@ -6,6 +6,7 @@ import About from './pages/About.vue';
 import Price from './pages/Price.vue';
 import Portfolio from './pages/Portfolio.vue';
 import Contact from './pages/Contact.vue';
+import Testimonials from './pages/Testimonials.vue';
 
 </script>
 
@@ -16,6 +17,7 @@ import Contact from './pages/Contact.vue';
     <About/>
     <Portfolio/>
     <Price/>
+    <Testimonials/>
     <Contact/>
 </template>
 
