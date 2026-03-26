@@ -5,6 +5,7 @@ import Services from './pages/Services.vue';
 import About from './pages/About.vue';
 import Price from './pages/Price.vue';
 import Portfolio from './pages/Portfolio.vue';
+import Contact from './pages/Contact.vue';
 
 </script>
 
@@ -13,8 +14,9 @@ import Portfolio from './pages/Portfolio.vue';
     <Hero/>
     <Services/>
     <About/>
-    <Portfolio/>    
+    <Portfolio/>
     <Price/>
+    <Contact/>
 </template>
 
 <style scoped>
