@@ -32,7 +32,7 @@ const bannersLoop = [...banners, ...banners, ...banners, ...banners, ...banners,
 
         <div class="flex text-center items-center rounded-2xl p-10">
             <div class="w-full h-0.5 bg-neutral-800"></div>
-            <p class="w-full text-neutral-500 lg:text-base text-sm">
+            <p class="w-full text-neutral-500 lg:text-base text-xs">
                 Eleve o nível da sua presença digital
             </p>
             <div class="w-full h-0.5 bg-neutral-800"></div>
