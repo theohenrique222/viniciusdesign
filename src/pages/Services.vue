@@ -25,7 +25,30 @@ const banners = [{
     url: 'https://upload.wikimedia.org/wikipedia/commons/4/4d/OpenAI_Logo.svg'
 }];
 
-const bannersLoop = [...banners, ...banners, ...banners, ...banners, ...banners, ...banners, ...banners];
+const slugs = [
+    {
+        id: 1,
+        title: 'Design Moderno',
+    }, {
+        id: 2,
+        title: 'Experiências digitais',
+    }, {
+        id: 2,
+        title: 'Detalhes que encantam',
+    }, {
+        id: 2,
+        title: 'Visual que gera impacto',
+    }, {
+        id: 2,
+        title: 'Experiências que inspiram',
+    }, {
+        id: 2,
+        title: 'Criatividade que diferencia',
+    }, {
+        id: 2,
+        title: 'Harmonia em cada detalhe',
+    },
+]
 </script>
 <template>
     <section id="services" class="bg-black text-white">
@@ -40,27 +63,17 @@ const bannersLoop = [...banners, ...banners, ...banners, ...banners, ...banners,
 
 
         <div class="py-10 overflow-hidden ">
-            <div class="flex whitespace-nowrap animate-[scroll_20s_linear_infinite] gap-32">
-                <!-- <img v-for="banner in bannersLoop" :src="banner.url" :key="banner.id" class="h-10"> -->
-
-                <p class="font-extrabold text-2xl text-neutral-600">Design Moderno</p>
-                <p class="font-extrabold text-2xl text-neutral-600">Experiências digitais</p>
-                <p class="font-extrabold text-2xl text-neutral-600">Detalhes que encantam</p>
-                <p class="font-extrabold text-2xl text-neutral-600">Visual que gera impacto</p>
-                <p class="font-extrabold text-2xl text-neutral-600">Experiências que inspiram</p>
-                <p class="font-extrabold text-2xl text-neutral-600">Criatividade que diferencia </p>
-                <p class="font-extrabold text-2xl text-neutral-600">Harmonia em cada detalhe</p>
-
+            <div class="flex whitespace-nowrap animate-[scroll_10s_linear_infinite] gap-32">
+                <p v-for="slug in slugs" :key="slug.id" class="font-extrabold text-2xl text-neutral-600">
+                    {{ slug.title }}
+                </p>
             </div>
         </div>
 
-
         <div class="container mx-auto grid lg:grid-cols-3 gap-10 px-10 py-20">
-
             <div v-for="card in cards" :key="card.id"
                 class="h-72 border border-neutral-800 hover:border-orange-400 transition flex flex-col justify-end cursor-pointer relative overflow-visible group">
 
-                <!-- Imagem (zoom controlado aqui) -->
                 <div class="absolute inset-0 overflow-hidden">
                     <div class="w-full h-full bg-cover bg-center grayscale 
                        group-hover:grayscale-0 group-hover:scale-110 
@@ -68,16 +81,13 @@ const bannersLoop = [...banners, ...banners, ...banners, ...banners, ...banners,
                     </div>
                 </div>
 
-                <!-- Overlay -->
                 <div class="absolute inset-0 bg-black/40 group-hover:bg-black/60 transition"></div>
 
-                <!-- Card -->
                 <div class="bg-neutral-950 p-4 m-4 relative z-10 
                     transition-all duration-500 
                     h-20 group-hover:h-44 
                     flex flex-col justify-between overflow-visible">
 
-                    <!-- Topo -->
                     <div class="flex justify-between items-center">
                         <h3 class="text-2xl font-bold">
                             {{ card.title }}
@@ -88,7 +98,6 @@ const bannersLoop = [...banners, ...banners, ...banners, ...banners, ...banners,
                         </div>
                     </div>
 
-                    <!-- Wrapper só pro texto -->
                     <div class="overflow-hidden">
                         <p class="text-sm text-neutral-300 
                           opacity-0 translate-y-4 font-extralight
@@ -96,16 +105,16 @@ const bannersLoop = [...banners, ...banners, ...banners, ...banners, ...banners,
                           transition-all duration-500 leading-5">
                             {{ card.text }}
                         </p>
-                        <div class="h-px w-full bg-neutral-600 my-3"/>
+                        <div class="h-px w-full bg-neutral-600 my-3" />
 
-                        
                         <a href="#">
                             <div class="flex items-center">
                                 <div class="text-white hover:text-amber-500 flex p-2">
                                     <p class=" font-extrabold">
-                                        Saiba mais  
+                                        Saiba mais
                                     </p>
-                                    <i class="pi pi-arrow-down-right font-extrabold hover:-rotate-45 transition duration-300 px-5 "></i>
+                                    <i
+                                        class="pi pi-arrow-down-right font-extrabold hover:-rotate-45 transition duration-300 px-5 "></i>
                                 </div>
                             </div>
                         </a>
@@ -122,8 +131,7 @@ const bannersLoop = [...banners, ...banners, ...banners, ...banners, ...banners,
     <section class="bg-black">
 
         <div class="py-10 overflow-hidden border-t border-neutral-800">
-            <div class="flex whitespace-nowrap animate-[scroll_20s_linear_infinite] gap-32">
-                <!-- <img v-for="banner in bannersLoop" :src="banner.url" :key="banner.id" class="h-10"> -->
+            <div class="flex whitespace-nowrap animate-[scroll_10s_linear_infinite] gap-32">
 
                 <p class="font-extrabold text-white text-9xl">Criar</p>
                 <p class="font-extrabold text-9xl text-white">Inovar</p>
@@ -135,7 +143,7 @@ const bannersLoop = [...banners, ...banners, ...banners, ...banners, ...banners,
 
     </section>
 
-    
+
 </template>
 
 <style>
